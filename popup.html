@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Data Scraper</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <h2>Website Data Scraper</h2>
+
+
+
+    <div class="stats">
+        <p style="background: var(--color-card-bg); border: 1px solid var(--color-card-border); border-radius: 6px; padding: 10px; backdrop-filter: blur(12px); box-shadow: var(--shadow-elevate);"><strong>Headings Found:</strong> <span id="headingCount">0</span></p>
+        <p><strong>Links Found:</strong> <span id="linkCount">0</span></p>
+    </div>
+
+    <h3>Page Title</h3>
+    <div id="title" style="background: var(--color-card-bg); border: 1px solid var(--color-card-border); border-radius: 6px; padding: 10px; backdrop-filter: blur(12px); box-shadow: var(--shadow-elevate);"></div>
+
+    <h3>Headings</h3>
+    <ul id="headings"></ul>
+
+    <h3>Links</h3>
+    <ul id="links"></ul>
+
+    <div class="button-group">
+    <button id="scrapeBtn" aria-label="Scrape Data">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+        Scrape
+    </button>
+    <button id="jsonBtn" aria-label="Export JSON">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16"/><path d="M9 4v5"/></svg>
+        JSON
+    </button>
+    <button id="csvBtn" aria-label="Export CSV">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8v8H8z"/></svg>
+        CSV
+    </button>
+    <button id="txtBtn" aria-label="Export TXT">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M8 8h8v8H8z"/></svg>
+        TXT
+    </button>
+    <button id="copyBtn" aria-label="Copy All Data">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15h4"/></svg>
+        Copy
+    </button>
+    <button id="clearBtn" aria-label="Clear Results">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        Clear
+    </button>
+    <button id="refreshBtn" aria-label="Scrape Again">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/></svg>
+        Refresh
+    </button>
+    <button id="darkToggle" aria-label="Toggle Dark Mode">
+        <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2"/><path d="M12 21v2"/><path d="M4.22 4.22l1.42 1.42"/><path d="M18.36 18.36l1.42 1.42"/><path d="M1 12h2"/><path d="M21 12h2"/><path d="M4.22 19.78l1.42-1.42"/><path d="M18.36 5.64l1.42-1.42"/></svg>
+    </button>
+</div>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
